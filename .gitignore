@@ -1,0 +1,15 @@
+# Sailfish build artifacts
+build*/
+RPMS/
+*.rpm
+*.o
+Makefile
+.qmake.stash
+
+# local state of the deploy pipeline
+deploy/state/
+*.log
+
+# editor noise
+*.swp
+.DS_Store

@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=MeshChat64
+Exec=MeshChat64
+Name=MeshChat64
+
+[X-Sailjail]
+# OrganizationName determines where app data lives on disk:
+# ~/.cache/<OrganizationName>/<ApplicationName>/ — the Gecko profile
+# (cookies, localStorage with your chat identity!) is stored there.
+OrganizationName=org.example
+ApplicationName=MeshChat64
+# Internet + WebView are REQUIRED — an empty Permissions= line silently
+# breaks all network access ("Server not found" with no error anywhere).
+# Microphone is needed for voice messages and calls.
+# Add Pictures (or UserDirs) if the image file picker misbehaves.
+Permissions=Internet;WebView;Microphone

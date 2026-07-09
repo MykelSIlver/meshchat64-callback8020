@@ -1,0 +1,31 @@
+MeshChat64 — Commodore Callback 8020 App
+=========================================
+
+ATTRIBUTION
+
+All MeshChat application code is authored by saint-cc.
+Upstream repository: https://github.com/saint-cc/meshchat
+
+This includes, without exception: server.py, script.js (the entire
+chat/crypto/relay client), statemachine.js, sw.js, index.html, the original
+style.css, and the MeshChat protocol design (encrypted relay chat, the
+shareable-key format, cross-relay delivery).
+
+This repository is strictly a presentation and compatibility layer on top of
+saint-cc's code, published with his permission. It never forks or modifies his
+source; the deploy pipeline mirrors his main branch pristine and re-applies
+the overlay at build time. Nothing in this repository relicenses any part of
+upstream MeshChat.
+
+THIRD-PARTY COMPONENTS
+
+- fflate (MIT) — bundled inside c64-layer/polyfills.js
+- dhepper/font8x8 (public domain) — source of the embedded pixel font
+  in c64-layer/c64-theme.css
+- qrcodejs by davidshimjs (MIT) — self-hosted as c64-layer/vendor/qrcode.min.js
+- html5-qrcode 2.3.8 (Apache-2.0) — self-hosted as
+  c64-layer/vendor/html5-qrcode.min.js
+- @noble/curves 1.4.0 (MIT) — bundled as
+  c64-layer/vendor/ed25519.bundle.min.js
+
+License texts: see the licenses/ directory.

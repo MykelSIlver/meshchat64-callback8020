@@ -1,0 +1,236 @@
+/* ============================================================
+   C64 THEME LAYER  ·  standalone overlay (c64-theme.css)
+   ------------------------------------------------------------
+   Appended by meshchat_update.sh AFTER the pristine upstream
+   static/style.css. Contains ONLY our additions: pixel font,
+   C64 palette, font override, CRT layer and the full icon set.
+   Upstream styling stays authoritative and keeps receiving its
+   updates; this layer overrides only what it names. No frozen
+   copy of upstream any more.
+   ============================================================ */
+
+@font-face {
+  font-family: 'PixelChat C64';
+  src: url('data:font/woff2;base64,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') format('woff2');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+
+/* ── C64 (VIC-II) palette — overrides upstream :root (dark → C64) ── */
+:root {
+  --bg:       #40318d;
+  --surface:  #4838a4;
+  --surface2: #5a4cc0;
+  --border:   #7d70d4;
+  --muted:    #7a6fc9;
+  --dim:      #9b91ea;
+  --text:     #c8c1ff;
+  --accent:   #74e0d6;
+  --online:   #6fce6f;
+  --mine:     #2f2480;
+  --theirs:   #4a3bb0;
+  --danger:   #d97c80;
+}
+
+/* ── typeface: upstream uses 'Courier New'/'monospace' — pixel font everywhere ── */
+body { font-family: 'PixelChat C64', 'Courier New', monospace; }
+#meshLog, #meshLogToggle, #meshLogHeader button, #showBlockedBtn {
+  font-family: 'PixelChat C64', monospace;
+}
+
+/* ============================================================
+   C64 THEME LAYER
+   ============================================================ */
+
+/* crisp pixels + faint phosphor warmth on the screen text */
+body {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
+}
+
+/* --- TV bezel: a chunky light-blue frame around the screen --- */
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  border: 13px solid var(--border);
+  box-shadow: inset 0 0 0 2px #2a2080,
+              inset 0 0 140px rgba(0,0,0,0.35);
+  pointer-events: none;
+  z-index: 40;
+}
+
+/* --- CRT scanlines + gentle flicker --- */
+body::after {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 41;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.14) 0 1px,
+    rgba(0,0,0,0)    1px 3px
+  );
+  animation: crtFlicker 5s steps(60) infinite;
+}
+@keyframes crtFlicker {
+  0%,100% { opacity: 0.55; }
+  50%     { opacity: 0.40; }
+}
+
+/* --- everything is blocky on a C64: kill rounded corners --- */
+.contactStatus, #connDot { border-radius: 0 !important; }
+.unreadBadge,
+.message.mine img, .message.theirs img { border-radius: 0 !important; }
+
+/* keep QR crisp when scaled */
+#myQrCode, #myQrCode img, #myQrCode canvas { image-rendering: pixelated; }
+
+/* --- SHOUTING LABELS (PETSCII was upper-case) --- */
+#loginBox h2, .subtitle, #loginStatus,
+#sidebarTitle, #chatHeaderName, #emptyChat,
+#syncStatus, #connectionStatus,
+.modal-box h3, .qr-tab, .scan-btn,
+#loginBox button, #sendButton, .chat-action-btn,
+.modal-btns button, .contact-dropdown button {
+  text-transform: uppercase;
+}
+
+/* --- accent glow + blinking block cursor on the headings --- */
+#loginBox h2, #sidebarTitle, .modal-box h3 {
+  text-shadow: 0 0 6px rgba(116,224,214,0.35);
+}
+#loginBox h2::after,
+#emptyChat::after {
+  content: "\2588";          /* solid block, the C64 cursor */
+  margin-left: 0.15em;
+  color: var(--accent);
+  animation: c64blink 1s steps(1) infinite;
+}
+@keyframes c64blink { 50% { opacity: 0; } }
+
+/* caret + selection in C64 cyan */
+input { caret-color: var(--accent); }
+::selection { background: var(--accent); color: #000; }
+
+/* scrollbars in-theme */
+#contactList::-webkit-scrollbar-thumb,
+#chatMessages::-webkit-scrollbar-thumb { background: var(--border); }
+
+
+/* ============================================================
+   C64 ICON SET  (appended at the end of style.css — replaces nothing)
+   Hides the emoji glyphs the pixel font cannot render and draws
+   C64 pixel icons over them. Pure CSS; script.js and index.html
+   stay untouched, so this survives every auto-update.
+   Tuned to the EXISTING button styling (flex/hover/recording).
+   ============================================================ */
+
+/* 1. "backup stored" indicator next to the contact name */
+.contactName span[title="backup stored"] {
+  font-size: 0 !important;
+  display: inline-block;
+  width: 12px; height: 12px;
+  vertical-align: -1px;
+  image-rendering: pixelated;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%20shape-rendering='crispEdges'%3E%3Cpath%20d='M1%201%20H11%20L15%205%20V15%20H1%20Z'%20fill='%2374e0d6'/%3E%3Crect%20x='4'%20y='2'%20width='6'%20height='4'%20fill='%2340318d'/%3E%3Crect%20x='8'%20y='2'%20width='2'%20height='4'%20fill='%235a4cc0'/%3E%3Crect%20x='3'%20y='9'%20width='10'%20height='5'%20fill='%2340318d'/%3E%3Crect%20x='4'%20y='10'%20width='8'%20height='1'%20fill='%2374e0d6'/%3E%3Crect%20x='4'%20y='12'%20width='8'%20height='1'%20fill='%2374e0d6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* hide the emoji text on the icon buttons */
+#exportBtn, #audioBtn, #imageBtn, #contactMenuBtn, .reaction-trigger-btn {
+  font-size: 0;
+}
+
+/* shared ::before icon (inherits the existing flex centering or gets it below) */
+#contactMenuBtn::before, .reaction-trigger-btn::before {
+  content: "";
+  display: block;
+  image-rendering: pixelated;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* these two were not centered -> center them here (leaves hover/recording/border alone) */
+/* media buttons (mic/camera): icon as BACKGROUND instead of ::before.
+   Robust on narrow mobile: a background is painted across the whole button
+   and cannot be clipped away by flex/tight height. min-height guarantees
+   room for the 18px icon; !important so the upstream :hover background
+   does not wipe the icon. */
+#audioBtn, #imageBtn {
+  min-height: 26px;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 18px 18px !important;
+  image-rendering: pixelated;
+}
+#audioBtn { background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%20shape-rendering='crispEdges'%3E%3Crect%20x='7'%20y='1'%20width='2'%20height='1'%20fill='%2374e0d6'/%3E%3Crect%20x='6'%20y='2'%20width='4'%20height='6'%20fill='%2374e0d6'/%3E%3Crect%20x='7'%20y='3'%20width='2'%20height='1'%20fill='%2340318d'/%3E%3Crect%20x='7'%20y='5'%20width='2'%20height='1'%20fill='%2340318d'/%3E%3Crect%20x='4'%20y='7'%20width='1'%20height='2'%20fill='%2374e0d6'/%3E%3Crect%20x='11'%20y='7'%20width='1'%20height='2'%20fill='%2374e0d6'/%3E%3Crect%20x='4'%20y='9'%20width='8'%20height='1'%20fill='%2374e0d6'/%3E%3Crect%20x='7'%20y='10'%20width='2'%20height='3'%20fill='%2374e0d6'/%3E%3Crect%20x='5'%20y='13'%20width='6'%20height='1'%20fill='%2374e0d6'/%3E%3C/svg%3E") !important; }
+#imageBtn { background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%20shape-rendering='crispEdges'%3E%3Crect%20x='4'%20y='2'%20width='4'%20height='2'%20fill='%2374e0d6'/%3E%3Crect%20x='1'%20y='4'%20width='14'%20height='9'%20fill='%2374e0d6'/%3E%3Crect%20x='6'%20y='6'%20width='4'%20height='4'%20fill='%2340318d'/%3E%3Crect%20x='7'%20y='7'%20width='2'%20height='2'%20fill='%235a4cc0'/%3E%3Crect%20x='12'%20y='5'%20width='2'%20height='1'%20fill='%2340318d'/%3E%3C/svg%3E") !important; }
+.reaction-trigger-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+}
+/* NOTE: #exportBtn and #contactMenuBtn get NO display rule,
+   so the upstream 'display:none -> .visible' behavior stays intact. */
+
+#exportBtn { background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%20shape-rendering='crispEdges'%3E%3Cpath%20d='M1%201%20H11%20L15%205%20V15%20H1%20Z'%20fill='%2374e0d6'/%3E%3Crect%20x='4'%20y='2'%20width='6'%20height='4'%20fill='%2340318d'/%3E%3Crect%20x='8'%20y='2'%20width='2'%20height='4'%20fill='%235a4cc0'/%3E%3Crect%20x='3'%20y='9'%20width='10'%20height='5'%20fill='%2340318d'/%3E%3Crect%20x='4'%20y='10'%20width='8'%20height='1'%20fill='%2374e0d6'/%3E%3Crect%20x='4'%20y='12'%20width='8'%20height='1'%20fill='%2374e0d6'/%3E%3C/svg%3E") center / 18px 18px no-repeat; image-rendering: pixelated; }
+#contactMenuBtn::before   { width: 18px; height: 18px; background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%20shape-rendering='crispEdges'%3E%3Crect%20x='2'%20y='7'%20width='2'%20height='2'%20fill='%2374e0d6'/%3E%3Crect%20x='7'%20y='7'%20width='2'%20height='2'%20fill='%2374e0d6'/%3E%3Crect%20x='12'%20y='7'%20width='2'%20height='2'%20fill='%2374e0d6'/%3E%3C/svg%3E"); }
+.reaction-trigger-btn::before { width: 14px; height: 14px; background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%20shape-rendering='crispEdges'%3E%3Crect%20x='11'%20y='3'%20width='2'%20height='5'%20fill='%2374e0d6'/%3E%3Crect%20x='4'%20y='6'%20width='9'%20height='2'%20fill='%2374e0d6'/%3E%3Crect%20x='4'%20y='4'%20width='2'%20height='2'%20fill='%2374e0d6'/%3E%3Crect%20x='2'%20y='6'%20width='2'%20height='2'%20fill='%2374e0d6'/%3E%3Crect%20x='4'%20y='8'%20width='2'%20height='2'%20fill='%2374e0d6'/%3E%3C/svg%3E"); }
+
+/* 7. "known devices" button next to contacts  (was: a bare + ) */
+.deviceInfoBtn {
+  font-size: 0;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  width: 24px; height: 24px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; border-radius: 0; cursor: pointer;
+  transition: border-color 0.2s;
+}
+.deviceInfoBtn:hover { border-color: var(--accent); }
+.deviceInfoBtn::before {
+  content: ""; display: block; width: 16px; height: 16px;
+  image-rendering: pixelated;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%20shape-rendering='crispEdges'%3E%3Crect%20x='0'%20y='2'%20width='10'%20height='7'%20fill='%2374e0d6'/%3E%3Crect%20x='1'%20y='3'%20width='8'%20height='4'%20fill='%2340318d'/%3E%3Crect%20x='4'%20y='9'%20width='2'%20height='1'%20fill='%2374e0d6'/%3E%3Crect%20x='2'%20y='10'%20width='6'%20height='1'%20fill='%2374e0d6'/%3E%3Crect%20x='11'%20y='4'%20width='5'%20height='11'%20fill='%2374e0d6'/%3E%3Crect%20x='12'%20y='5'%20width='3'%20height='7'%20fill='%2340318d'/%3E%3Crect%20x='13'%20y='13'%20width='1'%20height='1'%20fill='%2340318d'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* ── keep the input row clear of the CRT bezel ──
+   body::before paints a ~15px frame (13px border + 2px inner line) over the
+   screen edges. The media buttons (Hold to record / Send image) at the
+   bottom right were partially covered. We push the whole bottom input row
+   inward with MARGIN (not padding!): margin keeps the row clear of the frame
+   WITHOUT stealing interior height, so the vertically stacked mic/camera
+   icons keep their full size on every screen — including narrow mobile.
+   The bezel itself stays fully intact. */
+#chatInputContainer { margin-right: 15px; margin-bottom: 15px; }
+
+/* the textarea may shrink fully (a form field's default min-width otherwise
+   makes the row too wide, pushing the media buttons under the right bezel). */
+#chatInput { min-width: 0; }
+
+
+/* ============================================================
+   SMALL-SCREEN POLISH  ·  e.g. Commodore Callback 8020 (480x640)
+   ============================================================ */
+
+/* Short screens: the login screen may scroll and aligns to the top, so a
+   login box taller than the screen (incl. the hint text) is no longer
+   clipped. body stays overflow:hidden -- we scroll inside #loginScreen itself. */
+@media (max-height: 720px) {
+  #loginScreen {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 18px 0;
+    scrollbar-width: none;             /* Firefox/Gecko (SailfishOS WebView): hide the bar */
+  }
+  /* hide the scrollbar so it does not cover the right bezel; scrolling still works */
+  #loginScreen::-webkit-scrollbar { width: 0; height: 0; }
+}
+
+/* Narrow screens: the CRT bezel proportionally thinner (13px is hefty at 480px),
+   and the input-row margin correspondingly smaller so more room remains. */
+@media (max-width: 600px) {
+  body::before {
+    border-width: 7px;
+    box-shadow: inset 0 0 0 1px #2a2080, inset 0 0 70px rgba(0,0,0,0.28);
+  }
+  #chatInputContainer { margin-right: 9px; margin-bottom: 9px; }
+}
