@@ -1,5 +1,6 @@
 <img width="1033" height="1362" alt="meshchat64" src="https://github.com/user-attachments/assets/01a85ba0-357f-42e3-90f1-23bae75f0a16" />
-# MeshChat64 — Commodore Callback 8020 App
+
+## MeshChat64 — Commodore Callback 8020 App
 
 A native **SailfishOS WebView app** plus a **Commodore 64 presentation layer**
 that together turn a self-hosted [MeshChat](https://github.com/saint-cc/meshchat)
