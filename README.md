@@ -50,12 +50,12 @@ The two halves are intentionally decoupled:
 ## Architecture
 
 ```
-┌────────────────────────┐        ┌──────────────────────────────────────┐
-│ Commodore Callback 8020│        │ Raspberry Pi                         │
+┌────────────────────────┐        ┌───────────────────────────────────────┐
+│ Commodore Callback 8020│        │ Raspberry Pi                          │
 │  MeshChat64 (this app) │ wss/   │  nginx ──► Docker: MeshChat (saint-cc)│
-│  SailfishOS WebView    │ https  │            + C64 overlay re-applied  │
+│  SailfishOS WebView    │ https  │            + C64 overlay re-applied   │
 │  (Gecko 91)            ├───────►│              on every upstream update │
-└────────────────────────┘  443   └──────────────────────────────────────┘
+└────────────────────────┘  443   └───────────────────────────────────────┘
 ```
 
 The pipeline (`deploy/meshchat_update.sh`) runs from cron, mirrors upstream
